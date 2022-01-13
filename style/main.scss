@@ -1,0 +1,59 @@
+@import "vars-mixin";
+@import "first-section";
+@import "section-2";
+@import "section-3";
+@import "section-4";
+@import "section-5";
+@import "section-6";
+@import "footer";
+
+// global settings --
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  font-family: $titles-font;
+  font-weight: 700;
+}
+h4 {
+  font-family: $sub-font;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+p {
+  font-family: $paragraph-font;
+  font-style: italic;
+  max-width: 100%;
+}
+.container {
+  max-width: 100%;
+  @include breakPoints(mobile) {
+    padding: 1em;
+  }
+  @include breakPoints(small) {
+    padding: 1em;
+  }
+}
+
+button {
+  width: auto;
+  background-color: $main-color;
+  color: $black-color;
+  padding: 0.5em 1.5em;
+  font-family: $sub-font;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  &:hover {
+    background-color: $black-color;
+    color: $sub-color;
+  }
+}

@@ -1,0 +1,87 @@
+.first-section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  @include breakPoints(mobile) {
+    height: 100%;
+    padding: 1em 0;
+  }
+  @include breakPoints(small) {
+    height: 100%;
+    padding: 1em 0;
+  }
+  @include breakPoints(medium) {
+    height: 100%;
+    padding: 1em 0;
+  }
+  .bg {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: brightness(0.5);
+    @include breakPoints(mobile) {
+      object-position: center right;
+      height: 100%;
+    }
+    @include breakPoints(small) {
+      object-position: center right;
+      height: 100%;
+    }
+    @include breakPoints(medium) {
+      object-position: center right;
+      height: 100%;
+    }
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+    @include flex;
+    flex-direction: row;
+    color: $white-color;
+    .left-square {
+      width: 4em;
+      z-index: 1;
+      height: 40%;
+      @include breakPoints(mobile) {
+        width: 2em;
+      }
+    }
+    .right-square {
+      width: 4em;
+      z-index: 1;
+      height: 40%;
+      transform: rotateZ(180deg);
+      @include breakPoints(mobile) {
+        width: 2em;
+      }
+    }
+    section {
+      text-align: center;
+      position: relative;
+      width: 40%;
+      @include flex;
+      flex-direction: column;
+      @include breakPoints(mobile) {
+        width: 80%;
+      }
+      h4 {
+        font-size: 1.5em;
+      }
+      h1 {
+        font-size: 4.5em;
+        margin-bottom: 0.2em;
+        @include breakPoints(mobile) {
+          font-size: 3em;
+        }
+      }
+      p {
+        width: 62ch;
+        margin-bottom: 1em;
+      }
+    }
+  }
+}

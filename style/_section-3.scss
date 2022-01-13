@@ -1,0 +1,112 @@
+.section-3 {
+  padding: 1em 0 0;
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    @include flex;
+    @include breakPoints(mobile) {
+      width: 100%;
+      flex-direction: column;
+    }
+    @include breakPoints(small) {
+      width: 100%;
+      flex-direction: row;
+    }
+    @include breakPoints(medium) {
+      width: 100%;
+      flex-direction: row;
+    }
+    img {
+      width: 30%;
+      margin-right: 2em;
+      @include breakPoints(mobile) {
+        width: 100%;
+        margin: 0 0 1em;
+      }
+      @include breakPoints(small) {
+        width: 70%;
+        margin: 0 0 1em;
+      }
+      @include breakPoints(medium) {
+        width: 50%;
+        margin: 0 0 1em;
+      }
+    }
+    section {
+      width: 50%;
+      @include breakPoints(mobile) {
+        width: 100%;
+      }
+      @include breakPoints(small) {
+        width: 100%;
+      }
+      h4 {
+        margin-bottom: 0.5em;
+        font-size: 1.2em;
+        @include breakPoints(mobile) {
+          text-align: center;
+        }
+        @include breakPoints(small) {
+          text-align: center;
+        }
+      }
+      h1 {
+        font-size: 2.5em;
+        margin-bottom: 0.5em;
+        line-height: 1.2;
+        @include breakPoints(mobile) {
+          font-size: 2em;
+        }
+        @include breakPoints(small) {
+          font-size: 2em;
+        }
+      }
+      p {
+        width: 80%;
+        margin-bottom: 1em;
+        @include breakPoints(mobile) {
+          width: 100%;
+        }
+        @include breakPoints(small) {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .services {
+    width: 100%;
+    height: 50vh;
+    @include grid;
+    @include breakPoints(mobile) {
+      height: auto;
+    }
+    @include breakPoints(small) {
+      height: auto;
+    }
+    article {
+      @include flex;
+      flex-direction: column;
+      padding: 1em 1.5em;
+      background-color: $main-color;
+      &:nth-of-type(2) {
+        background-color: $sub-color;
+      }
+      img {
+        width: 15%;
+        margin-bottom: 1em;
+      }
+      h1 {
+        text-align: center;
+        font-size: 2em;
+        span {
+          font-weight: 200;
+          display: block;
+        }
+      }
+      p {
+        width: 80%;
+        text-align: center;
+      }
+    }
+  }
+}

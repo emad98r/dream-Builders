@@ -1,0 +1,99 @@
+.section-2 {
+  width: 100%;
+  height: auto;
+  background-color: $black-color;
+  color: $white-color;
+  padding: 1em 0;
+  @include breakPoints(mobile) {
+    height: 100vh;
+  }
+  .container {
+    width: 60%;
+    margin: 0 0 0 10%;
+    @include flex;
+    justify-content: space-around;
+    position: relative;
+    @include breakPoints(mobile) {
+      flex-direction: column;
+      width: 100%;
+      margin: 0;
+    }
+    @include breakPoints(small) {
+      flex-direction: column;
+      width: 100%;
+      margin: 0;
+      align-items: flex-start;
+    }
+    @include breakPoints(medium) {
+      flex-direction: column;
+      width: 80%;
+      margin: 0 auto;
+      align-items: flex-start;
+    }
+    h1 {
+      font-size: 10em;
+      color: $main-color;
+    }
+    section {
+      width: 50%;
+      @include flex;
+      flex-direction: column;
+      align-items: flex-start;
+      @include breakPoints(mobile) {
+        width: 100%;
+      }
+      h2 {
+        margin-bottom: 0.5em;
+        font-size: 2em;
+        @include breakPoints(mobile) {
+          padding: 0 0.5em;
+        }
+      }
+      p {
+        width: 20em;
+        @include breakPoints(mobile) {
+          padding: 0 1em;
+        }
+        @include breakPoints(small) {
+          width: 94%;
+        }
+      }
+      &:last-of-type {
+        width: 45%;
+        position: absolute;
+        top: 20%;
+        right: -56%;
+        transform: translate(-50%, -50%);
+        @include breakPoints(mobile) {
+          width: 90%;
+          bottom: -80%;
+          right: 5%;
+          top: auto;
+          transform: none;
+        }
+        @include breakPoints(small) {
+          top: 64%;
+          right: -20%;
+        }
+        @include breakPoints(medium) {
+          top: 64%;
+          right: -20%;
+        }
+        h2 {
+          background-color: rgb(53, 53, 53);
+          margin: 0;
+          padding: 1em;
+          @include breakPoints(mobile) {
+            padding: 0.8em;
+          }
+        }
+        p {
+          background-color: $main-color;
+          color: $black-color;
+          width: 100%;
+          padding: 1.5em;
+        }
+      }
+    }
+  }
+}

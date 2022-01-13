@@ -1,0 +1,40 @@
+footer {
+  width: 100%;
+  @include flex;
+  flex-direction: column;
+  .info {
+    width: 100%;
+    @include grid;
+    background-color: $main-color;
+    article {
+      padding: 2em 0;
+      width: 100%;
+      @include flex;
+      flex-direction: column;
+      &:nth-of-type(2) {
+        background-color: $sub-color;
+      }
+      img {
+        width: 15%;
+        margin-bottom: 1em;
+      }
+    }
+  }
+  .copyright {
+    width: 100%;
+    background-color: $black-color;
+    padding: 1.5em 0;
+    color: $white-color;
+    text-align: center;
+    h1 {
+      font-weight: 400;
+      a {
+        text-decoration: none;
+        color: $sub-color;
+        &:hover {
+          color: $white-color;
+        }
+      }
+    }
+  }
+}
